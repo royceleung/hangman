@@ -4,7 +4,7 @@ angular.module('myApp.services', [])
   var startGame = function() {
     return $http({
       method: 'POST',
-      url: 'http://hangman.coursera.org/hangman/game',
+      url: 'https://hangman.coursera.org/hangman/game',
       data: {
         email: "royceleung@gmail.com"
       }
@@ -16,7 +16,7 @@ angular.module('myApp.services', [])
   var guessLetter = function(key, letter) {
     return $http({
       method: 'POST',
-      url: 'http://hangman.coursera.org/hangman/game/' + key,
+      url: 'https://hangman.coursera.org/hangman/game/' + key,
       data: {
         guess: letter
       }
