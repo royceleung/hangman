@@ -1,0 +1,26 @@
+<div class="container-fluid" ng-init="initGame()">
+  <div class="newGame">
+    <button class="btn btn-danger newGameButton" ng-click="initGame()">New Game</button>
+  </div>
+  <div class="phrase">
+    <ul class="list-inline phraseList">
+      <li ng-repeat="value in phrase track by $index">
+        <span>{{value}}</span> 
+      </li>
+    </ul>
+  </div>
+  <div class="letters">
+    <ul class="list-inline letterList">
+      <li class="letterList-elm" ng-repeat="(key, value) in allLetters">
+        <button class="btn btn-info letterButton"
+                ng-disabled="value || gameState !== 'alive'"
+                ng-click="guessLetter(key)">{{key}}</button>
+      </li>
+    </ul>
+  </div>
+  <div class="gameStatus">
+    <span ng-show="gameState === 'alive'">You have {{numTries}} tries left.</span>
+    <span ng-show="gameState === 'won'">Congratulations! You won!</span>
+    <span ng-show="gameState === 'lost'">Sorry. You lost.</span>
+  </div>
+</div>

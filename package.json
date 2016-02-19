@@ -1,0 +1,14 @@
+{
+  "name": "coursera",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bower": "^1.7.7",
+    "express": "^4.13.4",
+    "nodemon": "^1.8.1"
+  }
+}
