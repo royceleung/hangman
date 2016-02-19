@@ -1,6 +1,7 @@
 angular.module('myApp.services', [])
 
 .factory('courseraFactory', function($http) {
+  
   var startGame = function() {
     return $http({
       method: 'POST',
