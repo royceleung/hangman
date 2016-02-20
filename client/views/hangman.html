@@ -1,11 +1,11 @@
-<div class="container-fluid" ng-init="initGame()">
+<div class="game-board container-fluid" ng-init="initGame()">
   <div class="newGame">
     <button class="btn btn-danger newGameButton" ng-click="initGame()">New Game</button>
   </div>
   <div class="phrase">
     <ul class="list-inline phraseList">
       <li ng-repeat="value in phrase track by $index">
-        <span>{{value}}</span> 
+        <span class="secret-letters" ng-class="{'discover' : value !== '_'}">{{value}}</span> 
       </li>
     </ul>
   </div>
@@ -19,8 +19,8 @@
     </ul>
   </div>
   <div class="gameStatus">
-    <span ng-show="gameState === 'alive'">You have {{numTries}} tries left.</span>
-    <span ng-show="gameState === 'won'">Congratulations! You won!</span>
-    <span ng-show="gameState === 'lost'">Sorry. You lost.</span>
+    <p ng-show="gameState === 'alive'">You have <span class="tries">{{numTries}}</span> tries left.</p>
+    <p ng-show="gameState === 'won'">Congratulations! You won!</p>
+    <p ng-show="gameState === 'lost'">Sorry. You lost.</p>
   </div>
 </div>

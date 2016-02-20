@@ -6,10 +6,60 @@ body {
 .container-fluid {
   background-color: #f2f2f2;
 }
+
+#game-informations {
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#game-informations h3 {
+  margin: 0px;
+  font-size: 16px;
+}
+
+
 .letterList-elm {
   margin-top: 5px;
 }
 
+.game-board {
+  padding: 20px;
+}
+
 .phrase {
   font-size: 25px;
+  margin: 10px 0px 20px;
 }
+
+.gameStatus {
+  padding-top: 10px;
+}
+
+.tries {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.secret-letters.discover {
+  -webkit-animation: LetterDisplay 1s;
+  -moz-animation: LetterDisplay 1s;
+  animation: LetterDisplay 1s;
+}
+
+@-webkit-keyframes LetterDisplay {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes LetterDisplay {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes LetterDisplay {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
